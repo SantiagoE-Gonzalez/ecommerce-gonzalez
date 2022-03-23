@@ -1,0 +1,17 @@
+.nav-link:hover{
+    background-color: #074bb1;
+    color:white;
+    border-radius: 25px;
+}
+
+.nav-link{
+    border-radius: 25px;
+}
+
+.rightNavbar{
+    float:right;
+}
+
+.leftNavbar{
+    float:left;
+}
