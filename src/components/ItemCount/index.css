@@ -8,6 +8,7 @@
     box-sizing: content-box;
     background-color: white;
     margin-bottom: 20px;
+    display: block;
 }
 
 .formPropio{
