@@ -1,0 +1,12 @@
+.tarjetaProducto{
+    border: 0px solid;
+    padding:30px;
+}
+
+.minheight{
+    min-height: 450px;
+}
+
+.limitImage{
+    max-height: 250px;
+}

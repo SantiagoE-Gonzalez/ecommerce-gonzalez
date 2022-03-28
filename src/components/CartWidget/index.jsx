@@ -1,5 +1,5 @@
 import React from 'react'
-import carrito from './cart.svg'
+import carrito from './../../assets/cart.svg'
 function CartWidget({cantidadItems}) {
   return (
     <button className="btn btn-success" type="submit">
