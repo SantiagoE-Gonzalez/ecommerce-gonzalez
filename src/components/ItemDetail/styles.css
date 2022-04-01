@@ -1,0 +1,10 @@
+.detailProducto {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.productoImagen {
+    width: 100%;
+}
