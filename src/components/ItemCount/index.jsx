@@ -22,7 +22,7 @@ const ItemCount = ({product, stock, initial, onAdd}) => {
     }, [cantidadElegida, initial, stock])
 
   return (
-        <div className="card itemCount col-sm-3">
+        <div className="card itemCount">
             <div className="card-body">
                 <h6 className="card-subtitle mb-2 text-muted">{product}</h6>
                 <div className="formularioHorizontal row">

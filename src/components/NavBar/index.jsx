@@ -14,25 +14,19 @@ function NavBar() {
         <div className="collapse navbar-collapse centerNavbar" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="/#"><Link className='nav-link' to="/">Inicio</Link></a>
+              <Link className='nav-link' to="/">Inicio</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">
-                <Link className='nav-link' to="/category/men's clothing">Ropa de Hombre
-                </Link>
-              </a>
+              <Link className='nav-link' to="/category/men's clothing">Ropa de Hombre
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">
               <Link className='nav-link' to="/category/jewelery">Joyeria
-                </Link>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/category/electronics">
-                <Link  className='nav-link' to="/category/electronics">Electrónica
-                </Link>
-              </a>
+              <Link className='nav-link' to="/category/electronics">Electrónica
+              </Link>
             </li>
           </ul>
           <div className="d-flex">
