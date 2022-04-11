@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import ItemDetail from '../../components/ItemDetail/index'
-import { db } from '../../Firebase/config';
-import { doc, getDoc } from "firebase/firestore";
+
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState([]);
@@ -29,7 +28,7 @@ const ItemDetailContainer = () => {
             console.log(error);
           }
         })()
-      }, [])
+      })
 
     return (
         <>

@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
+import { Shop } from '../../context/ShopProvider'
 import carrito from './../../assets/cart.svg'
-function CartWidget({cantidadItems}) {
+function CartWidget() {
+  const{cantidadItems} = useContext(Shop);
+
   return (
-    <button className="btn btn-success" type="submit">
-        <img src={carrito} className="imgCart" alt="carrito"/><span> {cantidadItems} </span>
-    </button>
+    <Link className="btn" to='/cart'>
+      <img src={carrito} className="imgCart" alt="carrito" />
+      {cantidadItems>0?<span className="badge bg-info"> {cantidadItems} </span>:''}
+    </Link>
   )
 }
 export default CartWidget

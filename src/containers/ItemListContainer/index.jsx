@@ -2,10 +2,20 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import ItemList from '../../components/ItemList'
 function ItemListContainer({ greeting }) {
+  //const {estadoA} = useContext(Shop); 
+  /*
+  para usar el valor el contexto, debo hacer const y entre {} pongo el mismo nombre
+  de la propiedad. Luego = useContext(nombre del contexto);
+  */
   const [items, setItems] = useState([]);
   const { id } = useParams(); //useParam se usa para usar parametros que van a venir en la url, como el id en category/:id
   // se usa el useEffect para que se ejecute el async apenas 
   // se carga la página
+
+  //Uso de funcion del contexto.
+  //const {fnDelContext} = useContext(Shop);
+  //console.log(fnDelContext(12,3));
+
   useEffect(() => {
     (async () => {
       try {

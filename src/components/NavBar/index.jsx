@@ -7,7 +7,7 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">eCommerceSG</a>
+        <Link className="navbar-brand" to='/'>eCommerceSG</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -30,7 +30,7 @@ function NavBar() {
             </li>
           </ul>
           <div className="d-flex">
-            <CartWidget cantidadItems="0" />
+            <CartWidget />
           </div>
         </div>
       </div>

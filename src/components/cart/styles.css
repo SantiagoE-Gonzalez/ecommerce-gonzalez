@@ -1,0 +1,13 @@
+.imagenPequena{
+    width: 100px;
+}
+
+.botonEliminar{
+    margin-top:20px;
+    margin-bottom: 20px;
+    float:right;
+}
+
+.textoCentral{
+    text-align: center;
+}
