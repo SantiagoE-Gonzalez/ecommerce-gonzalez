@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import ItemList from '../../components/ItemList'
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from '../../Firebase/config';
+
 function ItemListContainer({ greeting }) {
   //const {estadoA} = useContext(Shop); 
   /*
@@ -19,16 +22,22 @@ function ItemListContainer({ greeting }) {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch('https://fakestoreapi.com/products');
-        const data = await response.json();
-
-        if (!id) {
-          setItems(data);
-        }else{
-          const itemsFiltrados = data.filter(item => item.category === id);
-          setItems(itemsFiltrados);
+        try {
+          let queryConsultaProductos = query(collection(db, "productos"));
+          if(id){
+            queryConsultaProductos = query(collection(db, "productos"), where("category", "==", id));
+          }
+          collection(db, "productos")
+          const querySnapshot = await getDocs(queryConsultaProductos);
+          const productos = [];
+          querySnapshot.forEach((doc) => {
+            console.log(doc.id, " => ", doc.data());
+            productos.push({id: doc.id, ...doc.data()});
+          });
+          setItems(productos);
+        } catch (error) {
+          console.log(error);
         }
-
       } catch (error) {
         console.log(error);
       }
@@ -41,7 +50,7 @@ function ItemListContainer({ greeting }) {
         {items.length === 0 ?
           <div className="spinner-border text-primary" role="status">
             <span className="sr-only"></span>
-          </div> : <ItemList items={items}></ItemList>}
+        </div> : <ItemList items={items}></ItemList>}
 
       </div>
     </div>
