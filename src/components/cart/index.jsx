@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import { Shop } from '../../context/ShopProvider';
 import './styles.css';
 const Cart = () => {
-    const { cart, clear, removeItem} = useContext(Shop);
+    const { cart, clear, removeItem, totalAPagar} = useContext(Shop);
     const removerProducto = (item) =>{
         removeItem(item);
     }
@@ -41,6 +42,15 @@ const Cart = () => {
                     })}
                 </tbody>
             </table>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h5>Total a pagar: ${totalAPagar}</h5>
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 alignDerecha" >
+                    <Link to="/checkout" className="btn btn-success" >Finalizar compra</Link>
+                    </div>
+            </div>
         </div>
     )
 }

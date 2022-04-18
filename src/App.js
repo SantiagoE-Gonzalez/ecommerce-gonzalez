@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import ItemDetailContainer from './containers/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Cart from './components/cart';
+import Checkout from './components/checkout';
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
           <Route path='/category/:id'  element={<ItemListContainer/>}/> {/* categoria :id significa que espera cualquier valor, que será en string */}
           <Route path='/item/:id' element={<ItemDetailContainer/>} /> {/* va al contenedor, en el contenedor esta la lógica de como mostrar los componentes. */}
           <Route path='/cart' element={<Cart/>} />
+          <Route path='/checkout' element={<Checkout/>} />
         </Routes>
 
       </BrowserRouter>
